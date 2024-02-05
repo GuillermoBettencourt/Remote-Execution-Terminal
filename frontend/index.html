@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Terminal</title>
+    <link href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="terminal-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <script type="module">
+        import { RemoteTerminal } from './remote-execution-terminal/remote-terminal.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const terminal = new RemoteTerminal('terminal-container', 'ws://localhost:8080');
+        });
+    </script>
+</body>
+</html>
