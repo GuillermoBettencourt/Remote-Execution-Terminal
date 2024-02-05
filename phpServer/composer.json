@@ -1,0 +1,9 @@
+{   "autoload": {
+        "psr-4": {
+            "RemoteExecutionServer\\": "src/"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4.4"
+    }
+}
